@@ -1,0 +1,119 @@
+QTabWidget::pane {
+    background: white;
+    border-style: outset;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border-style: outset;
+}
+
+QTabBar::tab:selected {
+    color: #263238;
+}
+
+QTabBar::tab:!selected {
+    color: #78909c;
+}
+
+QTabBar::tab:!selected:hover {
+    color: #03a9f4;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:bottom:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+   border-style: outset;
+}
+
+QTabBar::tab:right:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+
+QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+    color: #ffffff;
+    font: 13pt \"Helvetica Neue\";
+}
+
+QPushButton:pressed {
+     background-color: #00a8ff;
+     border-style: outset;
+     border-color: #f3f5f7;
+ 
+}
+
+QGraphicsView{
+    border: 2px solid #eceff1;
+    border-radius: 1px;
+}
+
+QTableView{
+    border: 2px solid #eceff1;
+    border-radius: 1px;
+}

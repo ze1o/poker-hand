@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>741</width>
+    <height>686</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Batang</family>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Poker Hand Prediction with Machine Learning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	
+	background-color: #ffffff;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>40</y>
+     <width>311</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label{
+	color: #263238;
+	font: 20pt;
+}
+QLabel{
+	font:&quot;Helvetica Neue&quot;;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Poker Hand Prediction</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>112</y>
+     <width>651</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane {
+    background: white;
+border-style: outset;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+	border-style: outset;
+}
+
+QTabBar::tab:selected {
+	color: #263238;
+}
+
+QTabBar::tab:!selected {
+    color: #78909c;
+}
+
+QTabBar::tab:!selected:hover {
+    color: #03a9f4;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:bottom:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+   border-style: outset;
+}
+
+QTabBar::tab:right:selected {
+    border-style: outset;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="Tab1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <attribute name="title">
+     <string>PRE-PROCESSING</string>
+    </attribute>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>0</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #03a9f4;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_6{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Data Pre-Processing:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>470</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Load dataset</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>621</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>470</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Statistic dataset</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>311</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_4">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>120</y>
+       <width>271</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <zorder>graphicsView_4</zorder>
+    <zorder>line_2</zorder>
+    <zorder>label_6</zorder>
+    <zorder>pushButton</zorder>
+    <zorder>pushButton_2</zorder>
+    <zorder>tableView</zorder>
+    <zorder>line_3</zorder>
+    <zorder>line_3</zorder>
+    <zorder>tableView_4</zorder>
+   </widget>
+   <widget class="QWidget" name="Tab2">
+    <attribute name="title">
+     <string>FEATURE-EXTRACTION</string>
+    </attribute>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>135</x>
+       <y>0</y>
+       <width>148</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #03a9f4;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>621</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_66">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Choose type of feature-extraction:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>470</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Extraction</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Raw Data</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Count Card</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>271</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Standard Deviation with Count Card</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_4">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Count Suit</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_5">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>110</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Bag Count Suit</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_6">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>150</y>
+       <width>261</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Bag Count Card</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_7">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>190</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Flag of ACE</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>280</y>
+       <width>581</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>470</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Save CSV</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Tab3">
+    <attribute name="title">
+     <string>MODEL ML</string>
+    </attribute>
+    <widget class="Line" name="line_5">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>0</y>
+       <width>71</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #03a9f4;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_67">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Choose type of Machine Learning models:</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>621</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>180</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Build Model</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_9">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>100</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   Random Forest</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#plainTextEdit{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_68">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Time to build Model</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_10">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>100</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+	font:&quot;Helvetica Neue&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>   SVC</string>
+     </property>
+    </widget>
+    <zorder>graphicsView_19</zorder>
+    <zorder>line_5</zorder>
+    <zorder>label_67</zorder>
+    <zorder>pushButton_7</zorder>
+    <zorder>radioButton_9</zorder>
+    <zorder>plainTextEdit</zorder>
+    <zorder>label_68</zorder>
+    <zorder>radioButton_10</zorder>
+   </widget>
+   <widget class="QWidget" name="Tab4">
+    <attribute name="title">
+     <string>PREDICTION</string>
+    </attribute>
+    <widget class="Line" name="line_7">
+     <property name="geometry">
+      <rect>
+       <x>387</x>
+       <y>0</y>
+       <width>80</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #03a9f4;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>621</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>271</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#plainTextEdit_2{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_69">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Input record text to prediction:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>480</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Predict</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_70">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>170</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Select file text to prediction:</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>271</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_71">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>310</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Result Prediction:</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>330</y>
+       <width>271</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>270</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Open File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>430</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(31, 187, 228, 255), stop:1 rgba(40, 233, 224, 255));
+    border-style: outset;
+    border-color: #f3f5f7;
+    border-radius: 4px;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: #ffffff;
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+QPushButton:pressed {
+    background-color: #2980b9;
+    border-style: outset;
+    border-color: #f3f5f7;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Save CSV</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_73">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>60</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Precision Score:</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>90</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#plainTextEdit_3{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_74">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>190</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Plot ROC</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>220</y>
+       <width>291</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_4{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>480</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#plainTextEdit_5{
+	border: 2px solid red;
+	border-color: #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_72">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>490</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_66{
+	font: 14pt;
+	color: #263238;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>Time to Predict:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Tab5">
+    <attribute name="title">
+     <string>INFORMATION</string>
+    </attribute>
+    <widget class="Line" name="line_6">
+     <property name="geometry">
+      <rect>
+       <x>484</x>
+       <y>0</y>
+       <width>94</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #03a9f4;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_6{
+	font: 14pt;
+	color: #78909c;
+	
+	background-color: rgb(255, 255, 255);
+color: #263238;
+}</string>
+     </property>
+     <property name="text">
+      <string>CORE TEAM</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>201</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>150</y>
+       <width>201</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView_3">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>150</y>
+       <width>201</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGraphicsView{
+	border: 2px solid #eceff1;
+	border-radius: 1px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>180</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_8{
+	font: 14pt;
+	color: #263238;
+	background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Duy Trinh Khanh Le</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>70</y>
+       <width>331</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_9{
+	font: 14pt;
+	color: #78909c;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>University of Information Technology - VNU HCM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>210</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_10{
+	background-color: rgb(255, 255, 255);
+	font: 14pt;
+	color: #78909c;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>15520159</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>180</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_11{
+	font: 14pt;
+	color: #263238;
+	background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>THAO Le Nguyen Ngoc</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>210</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_12{
+	background-color: rgb(255, 255, 255);
+	font: 14pt;
+	color: #78909c;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>15520818</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>180</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_13{
+	font: 14pt;
+	color: #263238;
+	background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>YEN Hoang</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>210</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#label_14{
+	background-color: rgb(255, 255, 255);
+	font: 14pt;
+	color: #78909c;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>15521042</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>271</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_3{
+	color: #78909c;
+	font: 14pt;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Using Machine Learning</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>160</y>
+     <width>800</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0, 40);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

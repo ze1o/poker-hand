@@ -1,0 +1,8 @@
+QLabel{
+    font: 14pt;
+    color: #263238;
+}
+
+QCheckBox{
+    font: 13pt \"Helvetica Neue\";
+}
