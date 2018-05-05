@@ -559,7 +559,7 @@ class Ui_Form(object):
         def tab1_Display(self):
                 if self.Data_Pre == None:
                         self.Data_Pre = Pre_Process()
-                model = PandasModel(self.Data_Pre.getTrain().head(100))
+                model = PandasModel(self.Data_Pre.getData().head(100))
                 self.tableView.setModel(model)
                 self.tableView.resizeColumnsToContents()
 
@@ -583,7 +583,7 @@ class Ui_Form(object):
                         list_feature.append(7)
 
                 if self.Train_Feature == None:
-                        self.Train_Feature = Feature_Extraction(self.Data_Pre.getTrain())
+                        self.Train_Feature = Feature_Extraction(self.Data_Pre.getData())
                 
                 #Load and display feature
                 model = PandasModel(self.Train_Feature.getFeature(list_feature).head(100))
@@ -601,8 +601,6 @@ class Ui_Form(object):
         #Build model ML - tab 3
         def tab3_Display(self):
                 t0 = time()
-                if self.Test_Feature == None:
-                        self.Test_Feature = Feature_Extraction(self.Data_Pre.getTest())
 
                 #Build Random Forest model
                 if self.Model == None:
