@@ -9,6 +9,18 @@ import matplotlib.pyplot as plt
 
 
 class RF(object):
+    '''
+    Random forest model
+    Strength:
+        It runs efficiently on large databases. It can handle thousands of input variables without variable deletion.
+        Many data sets help the algorithm produces a highly accurate classifier. 
+        It is one of the most accurate learning algorithms available.
+        It generates an internal unbiased estimate of the generalization error as the forest building progresses.
+        It has methods for balancing error in class population unbalanced data sets.
+        It offers an experimental method for detecting variable interactions.
+    Weakness:
+        Overfit for some datasets with noisy classification/regression tasks.
+    '''
     def __init__(self, n_estimators = 20):
         self.n = n_estimators
         self.clf = RandomForestClassifier(self.n)
@@ -22,9 +34,24 @@ class RF(object):
     def report(self, y_actual, y_predict):
         return classification_report(y_actual, y_predict)
 
-# class SVM(object):
-#     def __init__(self):
-#         self.clf = 
+class SVM(object):
+    '''
+    Suport Vector Machine model
+    Using GridSearchCV to find the best parameter
+    '''
+    def __init__(self):
+        #Parameter of model
+        parameter = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4], 'C': [1, 10, 100, 1000]}]
+        self.clf = GridSearchCV(SVC(), parameter)
+    
+    def fit(self, x, y):
+        self.clf = self.clf.fit(x, y)
+    
+    def predict(self, x):
+        return self.clf.predict(x)
+
+    def report(self, y_actual, y_predict):
+        return classification_report(y_actual, y_predict)
 
 def show_values(pc, fmt="%.2f", **kw):
     '''

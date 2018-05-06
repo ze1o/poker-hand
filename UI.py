@@ -606,17 +606,11 @@ class Ui_Form(object):
                 t0 = time()
                 if self.radioButton_9.isChecked():
                         #Build Random Forest model
-                        if self.Model == None:
-                                self.Model = RF(n_estimators = 20)
-                if self.radioButton_10.isChecked():
-                        parameter = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4], 'C': [1, 10, 100, 1000]}]
-                        scores = ['precision', 'recall']
-                
-                        self.Model = GridSearchCV(SVC(), parameter)
-                        self.Model.fit(self.Train_Feature.getFeature(self.list_feature), self.Train_Feature.getY()) 
+                        self.Model = RF(n_estimators = 20)
+                if self.radioButton_10.isChecked():                
+                        self.Model = SVM()
 
-
-                # self.Model.fit(self.Train_Feature.getFeature(self.list_feature), self.Train_Feature.getY()) 
+                self.Model.fit(self.Train_Feature.getFeature(self.list_feature), self.Train_Feature.getY()) 
 
                 t1 = time()
                 self.plainTextEdit.setText(str(round((t1-t0), 2)) + " seconds")
