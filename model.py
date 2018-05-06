@@ -1,6 +1,8 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,6 +21,10 @@ class RF(object):
 
     def report(self, y_actual, y_predict):
         return classification_report(y_actual, y_predict)
+
+# class SVM(object):
+#     def __init__(self):
+#         self.clf = 
 
 def show_values(pc, fmt="%.2f", **kw):
     '''
